@@ -6,7 +6,7 @@ var TimerButton = React.createClass({
   },
   render: function(){
     return (
-      <div className="col col-4 px2 py3 border center" onClick={this.handleClick}>{this.props.timing}</div>
+      <div className="col col-4 px2 py3 border center btn muted" onClick={this.handleClick}>{this.props.timing}</div>
     )
   }
 });

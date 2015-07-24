@@ -20488,7 +20488,7 @@
 	  render: function render() {
 	    return React.createElement(
 	      "div",
-	      { className: "col col-4 px2 py3 border center", onClick: this.handleClick },
+	      { className: "col col-4 px2 py3 border center btn muted", onClick: this.handleClick },
 	      this.props.timing
 	    );
 	  }
