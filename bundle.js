@@ -47,7 +47,7 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var TimerButton = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./TimerButton\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var TimerButton = __webpack_require__(157);
 	var FitterHappierText = __webpack_require__(158);
 
 	var Main = React.createClass({
@@ -20476,7 +20476,31 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 157 */,
+/* 157 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var TimerButton = React.createClass({
+	  displayName: "TimerButton",
+
+	  handleClick: function handleClick() {
+	    this.props.onClick(this);
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      { className: "col col-4 px2 py3 border center btn muted", onClick: this.handleClick },
+	      this.props.timing
+	    );
+	  }
+	});
+
+	module.exports = TimerButton;
+
+/***/ },
 /* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
