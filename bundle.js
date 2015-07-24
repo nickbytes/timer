@@ -76,13 +76,17 @@
 	      'div',
 	      null,
 	      React.createElement(
-	        'h1',
-	        { className: "mt0 center white h1 muted" },
-	        this.state.secondsElapsed
+	        'div',
+	        { className: "flex flex-center", style: { height: '75vh' } },
+	        React.createElement(
+	          'div',
+	          { className: "mx-auto center white h1 muted", style: { fontSize: '100px' } },
+	          this.state.secondsElapsed
+	        )
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: "flex flex-wrap white absolute bottom-0 left-0 right-0" },
+	        { className: "white absolute bottom-0 left-0 right-0" },
 	        React.createElement(TimerButton, { timing: "10", onClick: this.handleClick }),
 	        React.createElement(TimerButton, { timing: "30", onClick: this.handleClick }),
 	        React.createElement(TimerButton, { timing: "60", onClick: this.handleClick }),
