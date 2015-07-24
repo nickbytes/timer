@@ -47,7 +47,7 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var TimerButton = __webpack_require__(157);
+	var TimerButton = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./TimerButton\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	var FitterHappierText = __webpack_require__(158);
 
 	var Main = React.createClass({
@@ -76,13 +76,17 @@
 	      'div',
 	      null,
 	      React.createElement(
-	        'h1',
-	        { className: "mt0 center white h1 muted" },
-	        this.state.secondsElapsed
+	        'div',
+	        { className: "flex flex-center", style: { height: '75vh' } },
+	        React.createElement(
+	          'div',
+	          { className: "mx-auto center white h1 muted", style: { fontSize: '100px' } },
+	          this.state.secondsElapsed
+	        )
 	      ),
 	      React.createElement(
 	        'div',
-	        { className: "flex flex-wrap white absolute bottom-0 left-0 right-0" },
+	        { className: "white absolute bottom-0 left-0 right-0" },
 	        React.createElement(TimerButton, { timing: "10", onClick: this.handleClick }),
 	        React.createElement(TimerButton, { timing: "30", onClick: this.handleClick }),
 	        React.createElement(TimerButton, { timing: "60", onClick: this.handleClick }),
@@ -20472,31 +20476,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 157 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(1);
-
-	var TimerButton = React.createClass({
-	  displayName: "TimerButton",
-
-	  handleClick: function handleClick() {
-	    this.props.onClick(this);
-	  },
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { className: "col col-4 px2 py3 border center btn muted", onClick: this.handleClick },
-	      this.props.timing
-	    );
-	  }
-	});
-
-	module.exports = TimerButton;
-
-/***/ },
+/* 157 */,
 /* 158 */
 /***/ function(module, exports, __webpack_require__) {
 

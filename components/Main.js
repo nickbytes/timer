@@ -24,9 +24,12 @@ var Main = React.createClass({
 
     return (
       <div>
-        <h1 className="mt0 center white h1 muted">{this.state.secondsElapsed}</h1>
+        <div className="flex flex-center" style={{height: '75vh'}}>
+          <div className="mx-auto center white h1 muted" style={{fontSize: '100px'}}>{this.state.secondsElapsed}</div>
+        </div>
 
-        <div className="flex flex-wrap white absolute bottom-0 left-0 right-0">
+
+        <div className="white absolute bottom-0 left-0 right-0">
           <TimerButton timing="10" onClick={this.handleClick}/>
           <TimerButton timing="30" onClick={this.handleClick}/>
           <TimerButton timing="60" onClick={this.handleClick}/>
